@@ -100,12 +100,19 @@
     <script>
         $(() => {
             $('.checkPwd-area').hide();
+            $('#submit-button').hide();
+            
             $('.memberPwd').on('change', () => {
                 $('.checkPwd-area').show();
-            })
+            });
+            
+            $('#insert-member').on('click', () => {
+            	$('#submit-button').click();
+            });
         });
     </script>
     <div class="page">
+        <form action="insert.me" method="POST">
         <div class="login-form-area">
             <div id="login-area">
                 <div id="logo-image-area">
@@ -368,9 +375,11 @@
                     <option value="ZW">Zimbabwe 🇿🇼</option>
                 </select>
 
-                <a href="/register" class="button" id="insert-member">회원가입</a>
+                <label class="button" id="insert-member">회원가입</label>
+                <button type="submit" id="submit-button"></button>
             </div>
         </div>
+        </form>
         <div class="content-area">
             <div id="content-about-area"> 
                 <div id="full-logo">
@@ -381,7 +390,6 @@
                         나만의 핫플레이스 를 친구들과 공유해 보세요.  <br><br>
                         기억하고 싶은 순간들과 장소를 저장할 수 있는 <br><br>
                         여기지영이 함께하겠습니다. <br>
-                        
                     </p>
                 </div>
             </div>

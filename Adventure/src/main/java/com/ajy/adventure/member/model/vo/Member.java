@@ -2,6 +2,13 @@ package com.ajy.adventure.member.model.vo;
 
 import java.sql.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Member {
 	
 	private int memNo; //MEM_NO	NUMBER

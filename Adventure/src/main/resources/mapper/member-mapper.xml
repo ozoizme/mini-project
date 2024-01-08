@@ -1,0 +1,32 @@
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mappder.dtd">
+<mapper namespace="com.ajy.adventure.member.model.dao.MemberMapper">
+	<insert	id="insertMember" parameterType="Member">
+		INSERT
+		  INTO
+		  	(
+		  	MEM_NO,
+		  	MEM_NAME,
+		  	MEM_NICKNAME,
+		  	MEM_ID,
+		  	MEM_PWD,
+		  	MEM_EMAIL,
+		  	MEM_COUNTRY,
+		  	ENROLL_DATE,
+		  	MEM_STATUS
+		  	)
+		VALUES
+			(
+			SEQ_MEM_NO.NEXTVAL,
+			#{memberName},
+			#{memberNickName},
+			#{memberId},
+			#{memberPwd},
+			#{memberEmail},
+			#{memberCountry},
+			SYSDATE,
+			DEFAULT
+			)
+	</insert>
+</mapper>

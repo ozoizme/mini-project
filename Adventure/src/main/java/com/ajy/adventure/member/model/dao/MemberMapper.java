@@ -10,5 +10,7 @@ public interface MemberMapper {
 
 	int insertMember(Member member, SqlSessionTemplate sqlSession);
 
+	int checkPassword(String memberPwd, SqlSessionTemplate sqlSession);
+
 
 }

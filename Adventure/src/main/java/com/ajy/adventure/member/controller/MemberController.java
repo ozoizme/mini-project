@@ -39,7 +39,7 @@ public class MemberController {
 	
 	@PostMapping("/checkPassword")
 	public ResponseEntity<String> checkPassword(@RequestBody String memberPwd){
-		String result = memberService.checkPassword(memberPwd) != 0 ? "success" : "fail";
+		String result = memberService.checkPassword(memberPwd) > 0 ? "success" : "fail";
 		HttpHeaders header = new HttpHeaders();
 		header.setContentType(new MediaType("text","html", Charset.forName("UTF-8")));
 		return new ResponseEntity<String>(result, header, HttpStatus.OK);

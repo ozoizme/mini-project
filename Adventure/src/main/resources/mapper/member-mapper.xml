@@ -30,4 +30,12 @@
 			DEFAULT
 			)
 	</insert>
+	<select id="checkPassword" resultType="_int">
+		SELECT
+				COUNT(MEM_PWD)
+		  FROM
+		  		MEMBER
+		 WHERE
+		 		MEM_PWD = #{memberPwd}
+	</select>
 </mapper>

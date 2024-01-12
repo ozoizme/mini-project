@@ -12,12 +12,17 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService{
 	
-	private final MemberMapper memberMapper = null;
-	private final SqlSessionTemplate sqlSession = null;
+	private final MemberMapper memberMapper;
+	private final SqlSessionTemplate sqlSession;
 	
 	@Override
 	public int insertMember(Member member) {
 		return memberMapper.insertMember(member, sqlSession);
+	}
+
+	@Override
+	public int checkPassword(String memberPwd) {
+		return memberMapper.checkPassword(memberPwd, sqlSession);
 	}
 
 }
